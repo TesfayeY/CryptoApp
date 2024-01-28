@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+
+    }
+}
+rootProject.name = "Crypto App"
+include ':app'
+buildscript {
+    repositories {
+        google() // Add Google's repository
+        mavenCentral() // Add Gradle Central
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0' // Specify the correct version
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    // Android configuration goes here
+}
